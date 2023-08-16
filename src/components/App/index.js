@@ -12,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <button
+        className="button"
         onClick={() => {
           handleClick();
         }}
@@ -19,7 +20,7 @@ function App() {
         Get Random Pokemon
       </button>
       <PokemonViewer id={random} />
-      <p>Pokedex: {id}</p>
+      <p className="pokeid">Pokedex: {id}</p>
     </div>
   );
 }
