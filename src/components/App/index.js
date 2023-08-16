@@ -10,17 +10,30 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <button
-        className="button"
-        onClick={() => {
-          handleClick();
-        }}
-      >
-        Get Random Pokemon
-      </button>
-      <PokemonViewer id={random} />
-      <p className="pokeid">Pokedex: {id}</p>
+    <div>
+      <div className="logodiv">
+        <img
+          className="logo"
+          src="https://1000logos.net/wp-content/uploads/2017/05/Pokemon-Logo-500x313.png"
+          alt="pokemon logo"
+        ></img>
+      </div>
+      <div className="ball-container">
+        <div class="poke_box">
+          <div class="pokeball">
+            <button
+              className="pokeball__button"
+              onClick={() => {
+                handleClick();
+              }}
+            ></button>
+          </div>
+        </div>
+      </div>
+      <div className="App">
+        <PokemonViewer id={random} />
+        <p className="pokeid">Pokedex: {id}</p>
+      </div>
     </div>
   );
 }

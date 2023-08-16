@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./viewer.css";
 
 function PokemonViewer({ id }) {
   const [pokemon, setPokemon] = useState([]);
@@ -15,8 +16,9 @@ function PokemonViewer({ id }) {
   }, [id]);
   return (
     <div className="pokemon-viewer">
-      <p>{pokemon.name}</p>
+      <p className="name">{pokemon.name}</p>
       <img
+        className="pokepic"
         src={pokemon.sprites?.other.home.front_default}
         alt="Random pokemon"
       />
